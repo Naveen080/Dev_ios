@@ -1,0 +1,66 @@
+using Foundation;
+using System.CodeDom.Compiler;
+
+namespace dev.iOS
+{
+	[Register ("EditViewController")]
+	partial class EditViewController
+	{
+		[Outlet]
+		UIKit.UIButton BackButton { get; set; }
+
+		[Outlet]
+		UIKit.UIButton DeleteButton { get; set; }
+
+		[Outlet]
+		UIKit.UILabel DeleteLabel { get; set; }
+
+		[Outlet]
+		UIKit.UITextField EditID { get; set; }
+
+		[Outlet]
+		UIKit.UITextField EditName { get; set; }
+
+		[Outlet]
+		UIKit.UIButton EditSubmit { get; set; }
+
+		[Outlet]
+		UIKit.UILabel UpdateLabel { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (EditName != null) {
+				EditName.Dispose ();
+				EditName = null;
+			}
+
+			if (EditID != null) {
+				EditID.Dispose ();
+				EditID = null;
+			}
+
+			if (EditSubmit != null) {
+				EditSubmit.Dispose ();
+				EditSubmit = null;
+			}
+
+			if (BackButton != null) {
+				BackButton.Dispose ();
+				BackButton = null;
+			}
+
+			if (DeleteButton != null) {
+				DeleteButton.Dispose ();
+				DeleteButton = null;
+			}
+
+			if (UpdateLabel != null) {
+				UpdateLabel.Dispose ();
+				UpdateLabel = null;
+			}
+
+			if (DeleteLabel != null) {
+				DeleteLabel.Dispose ();
+				DeleteLabel = null;
+			}
+		}
